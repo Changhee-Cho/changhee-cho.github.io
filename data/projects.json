@@ -232,11 +232,7 @@
       },
       {
         "label": "비고",
-        "content": "가상 mock 서버 종료로 인한 배포 중단"
-      },
-      {
-        "label": "",
-        "content": "각 Step의 GitHub Pull Request에서 코드리뷰 및 과정을 확인할 수 있음"
+        "content": "가상 mock 서버 종료로 인한 배포 중단<br> Step의 GitHub Pull Request에서 코드리뷰 및 과정을 확인할 수 있음"
       }
     ]
   },
@@ -365,7 +361,7 @@
   {
     "id": "06",
     "title": "보안 메모 어플리케이션 Guardian",
-    "period": "2024.10 — 2025.12",
+    "period": "2024.10 — 2024.12",
     "badge": "",
     "tags": ["AndroidStudio", "Java"],
     "isOpen": false,
@@ -424,6 +420,151 @@
       {
         "label": "결과",
         "content": "초기 실행 시 비밀번호 설정 화면 적용, 추후 비밀번호 수정 가능, 공유 기능 추가"
+      },
+      {
+        "label": "비고",
+        "content": "최종적으로 해당 수업에서 A+ 성적을 받음"
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "title": "GUI 계산기 프로그램",
+    "period": "2023.05",
+    "badge": "",
+    "tags": ["Java", "Swing", "GUI"],
+    "isOpen": false,
+    "images": [
+      {
+        "src": "assets/projects/project07/01.png",
+        "alt": "자바 스윙 계산기"
+      }
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Changhee-Cho/2023-Java-Calculator-Working",
+        "type": "outline"
+      }
+    ],
+    "goal": "Java Swing 컴포넌트를 이용해 실제로 작동하는 GUI 계산기 프로그램을 제작한다.",
+    "details": [
+      {
+        "label": "담당",
+        "content": "프로젝트 전반 개발(기여도 100%), 코드리뷰 요청 및 반영 등"
+      },
+      {
+        "label": "해결",
+        "content": "GUI 화면이 처음 실행될 때 모서리로 가는 현상을 개선하였으며, 정상 작동함을 확인함"
+      },
+      {
+        "label": "기술",
+        "content": "Java, Swing"
+      },
+      {
+        "label": "결과",
+        "content": "자바를 이용한 GUI 프로그래밍에 대한 원리를 학습하고 이해할 수 있었음"
+      },
+      {
+        "label": "비고",
+        "content": "최종적으로 해당 수업에서 A+ 성적을 받음"
+      }
+    ]
+  },
+  {
+    "id": "08",
+    "title": "대학 학내 종합 커뮤니티 웹서비스",
+    "period": "2022.10 — 2022.12",
+    "badge": "",
+    "tags": ["PHP", "Apache", "MariaDB", "HTML/CSS"],
+    "isOpen": false,
+    "images": [
+      {
+        "src": "assets/projects/project08/01.png",
+        "alt": "대학 웹 커뮤니티"
+      },
+      {
+        "src": "assets/projects/project08/02.png",
+        "alt": "대학 웹 커뮤니티"
+      }
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Changhee-Cho/2022-Member-Communities-Web",
+        "type": "outline"
+      }
+    ],
+    "goal": "PHP를 이용하여 실제로 게시판/로그인/파일공유가 되는 웹 서비스를 제작한다.",
+    "details": [
+      {
+        "label": "담당",
+        "content": "프로젝트 전반 개발(기여도 100%), 코드리뷰 요청 및 반영 등"
+      },
+      {
+        "label": "해결",
+        "content": "모바일 기기에서도 정상 작동하도록 반응형을 적용하였으며, md5로 비밀번호를 저장해 보안성을 높임"
+      },
+      {
+        "label": "기술",
+        "content": "PHP, Apache, HTML/CSS, MariaDB"
+      },
+      {
+        "label": "결과",
+        "content": "게시글, 댓글의 수정/삭제, 로그인/회원가입, 자료실 정상 작동"
+      },
+      {
+        "label": "비고",
+        "content": "최종적으로 해당 수업에서 A+ 성적을 받음<br>운영 서버 종료로 해당 웹 서비스 종료"
+      }
+    ]
+  },
+  {
+    "id": "09",
+    "title": "Arduino CLCD 알람시계(RTC)",
+    "period": "2022.12",
+    "badge": "",
+    "tags": ["Arduino", "Sketch"],
+    "isOpen": false,
+    "images": [
+      {
+        "src": "assets/projects/project09/01.png",
+        "alt": "아두이노 알람시계"
+      },
+      {
+        "src": "assets/projects/project09/02.png",
+        "alt": "아두이노 알람시계"
+      }
+    ],
+    "links": [
+      {
+        "label": "PPT 자료",
+        "url": "../../assets/projects/project09/report.pdf",
+        "type": "outline"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Changhee-Cho/2022-Arduino-Alarm-Clock-CLCD",
+        "type": "outline"
+      }
+    ],
+    "goal": "RTC모듈을 이용해 전원이 차단되어도 시간이 유지되고 정확한 시간을 유지하는 알람시계 제작",
+    "details": [
+      {
+        "label": "담당",
+        "content": "프로젝트 전반 개발(기여도 100%), 코드리뷰 요청 및 반영 등"
+      },
+      {
+        "label": "해결",
+        "content": "소프트웨어 인터럽트를 이용해 지정한 시간에 알람이 울리고, 버튼을 누르면 종료되도록 설계되었으며, DHT11을 통해 온습도 정보를 함께 제공함"
+      },
+      {
+        "label": "기술",
+        "content": "Arduino, Sketch"
+      },
+      {
+        "label": "결과",
+        "content": "전원이 차단되어도 안정적으로 시간이 유지되며, 전체적으로 부드럽게 작동하는 것을 확인함"
       },
       {
         "label": "비고",
