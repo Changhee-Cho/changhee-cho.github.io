@@ -10,7 +10,7 @@
       "React Query",
       "Vercel",
       "SSE",
-      "Github Actions",
+      "GitHub Actions",
       "Figma",
       "Gemini API"
     ],
@@ -32,12 +32,12 @@
     "links": [
       {
         "label": "GitHub(FE)",
-        "url": "https://github.com/kakao-tech-campus-3rd-step3/Team2_FE",
+        "url": "https://GitHub.com/kakao-tech-campus-3rd-step3/Team2_FE",
         "type": "outline"
       },
       {
         "label": "GitHub(BE)",
-        "url": "https://github.com/kakao-tech-campus-3rd-step3/Team2_BE",
+        "url": "https://GitHub.com/kakao-tech-campus-3rd-step3/Team2_BE",
         "type": "outline"
       },
       {
@@ -120,7 +120,7 @@
 
       {
         "label": "GitHub",
-        "url": "https://github.com/Changhee-Cho/Capstone_Design2",
+        "url": "https://GitHub.com/Changhee-Cho/Capstone_Design2",
         "type": "outline"
       }
     ],
@@ -192,23 +192,23 @@
     ],
     "links": [
       {
-        "label": "Github(Step1)",
-        "url": "https://github.com/next-step/react-gift-login/tree/changhee-cho",
+        "label": "GitHub(Step1)",
+        "url": "https://GitHub.com/next-step/react-gift-login/tree/changhee-cho",
         "type": "outline"
       },
       {
-        "label": "Github(Step2)",
-        "url": "https://github.com/next-step/react-gift-order/tree/changhee-cho",
+        "label": "GitHub(Step2)",
+        "url": "https://GitHub.com/next-step/react-gift-order/tree/changhee-cho",
         "type": "outline"
       },
       {
         "label": "GitHub(Step3)",
-        "url": "https://github.com/next-step/react-gift-product-list/tree/changhee-cho",
+        "url": "https://GitHub.com/next-step/react-gift-product-list/tree/changhee-cho",
         "type": "outline"
       },
       {
         "label": "GitHub(Step4 / 최종 결과물)",
-        "url": "https://github.com/next-step/react-gift-product-detail/tree/changhee-cho",
+        "url": "https://GitHub.com/next-step/react-gift-product-detail/tree/changhee-cho",
         "type": "outline"
       }
     ],
@@ -236,7 +236,7 @@
       },
       {
         "label": "",
-        "content": "각 Step의 Github Pull Request에서 코드리뷰 및 과정을 확인할 수 있음"
+        "content": "각 Step의 GitHub Pull Request에서 코드리뷰 및 과정을 확인할 수 있음"
       }
     ]
   },
@@ -267,8 +267,8 @@
     ],
     "links": [
       {
-        "label": "Github",
-        "url": "https://github.com/Changhee-Cho/fe-no2-assignment",
+        "label": "GitHub",
+        "url": "https://GitHub.com/Changhee-Cho/fe-no2-assignment",
         "type": "outline"
       },
       {
@@ -277,7 +277,7 @@
         "type": "primary"
       }
     ],
-    "goal": "1. 카카오테크 캠퍼스 3기 1단계-2 과제로, 카카오에서 제공하는 Mock 데이터를 활용해 과제를 수행한다.<br>2. Vite를 이용해 리액트 프로젝트를 set up 한다.<br>3. Git과 Github를 활용하는 법을 익히고, Vercel을 통해 배포한다.<br>4. Redux toolkit으로 상태를 관리하고 localStorage를 활용하여 데이터를 저장한다.",
+    "goal": "1. 카카오테크 캠퍼스 3기 1단계-2 과제로, 카카오에서 제공하는 Mock 데이터를 활용해 과제를 수행한다.<br>2. Vite를 이용해 리액트 프로젝트를 set up 한다.<br>3. Git과 GitHub를 활용하는 법을 익히고, Vercel을 통해 배포한다.<br>4. Redux toolkit으로 상태를 관리하고 localStorage를 활용하여 데이터를 저장한다.",
     "details": [
       {
         "label": "담당",
@@ -306,39 +306,39 @@
     "title": "TMDB API 활용 영화 정보 검색 서비스(MovieOn)",
     "period": "2025.04",
     "badge": "",
-    "tags": ["JavaScript", "HTML", "CSS", "Git", "Github Pages"],
+    "tags": ["JavaScript", "HTML", "CSS", "Git", "GitHub Pages"],
     "isOpen": false,
     "images": [
       {
-        "src": "assets/projects/project04/01.png",
-        "alt": "포켓몬"
+        "src": "assets/projects/project05/01.png",
+        "alt": "무비온"
       },
       {
-        "src": "assets/projects/project04/02.png",
-        "alt": "포켓몬"
+        "src": "assets/projects/project05/02.png",
+        "alt": "무비온"
       },
       {
-        "src": "assets/projects/project04/03.png",
-        "alt": "포켓몬"
+        "src": "assets/projects/project05/03.png",
+        "alt": "무비온"
       },
       {
-        "src": "assets/projects/project04/04.png",
-        "alt": "포켓몬"
+        "src": "assets/projects/project05/04.png",
+        "alt": "무비온"
       }
     ],
     "links": [
       {
-        "label": "Github",
-        "url": "https://github.com/Changhee-Cho/fe-no2-assignment",
+        "label": "GitHub",
+        "url": "https://GitHub.com/Changhee-Cho/fe-no1-assignment",
         "type": "outline"
       },
       {
         "label": "홈페이지",
-        "url": "https://fe-no2-assignment-six.vercel.app/",
+        "url": "https://changhee-cho.GitHub.io/fe-no1-assignment/",
         "type": "primary"
       }
     ],
-    "goal": "1. 카카오테크 캠퍼스 3기 1단계-2 과제로, 카카오에서 제공하는 Mock 데이터를 활용해 과제를 수행한다.<br>2. Vite를 이용해 리액트 프로젝트를 set up 한다.<br>3. Git과 Github를 활용하는 법을 익히고, Vercel을 통해 배포한다.<br>4. Redux toolkit으로 상태를 관리하고 localStorage를 활용하여 데이터를 저장한다.",
+    "goal": "1. 카카오테크 캠퍼스 3기 1단계-1 과제로, TMDB에서 제공하는 API를 활용하여 과제를 수행하였음.<br>2. 웹 개발의 이해와 배포 과정을 실습한다.<br>3. API 활용에 대한 이해와 활용 후 배포를 통해 서비스한다.",
     "details": [
       {
         "label": "담당",
@@ -346,19 +346,88 @@
       },
       {
         "label": "해결",
-        "content": "카카오 제공 데이터 및 API 통신을 활용한 JSON 데이터 처리, 데이터 흐름에 따른 지연 처리를 통한 UX 개선"
+        "content": "영화 정보 및 데이터는 TMDB API 사용, 모달을 통한 영화 상세 정보 표시와 반응형 웹을 구현"
       },
       {
         "label": "기술",
-        "content": "React, JavaScript,Redux, Git, HTML/CSS, Vercel"
+        "content": "JavaScript, HTML/CSS, GitHub Pages"
       },
       {
         "label": "결과",
-        "content": "React Set up 및 배포 과정 학습, 로컬에서의 데이터 저장 및 상태 관리에 대한 실습 완료"
+        "content": "GitHub Pages를 이용한 배포 및 TMDB API 적용 완료, async/await로 API 호출 리팩터링"
       },
       {
         "label": "비고",
         "content": "모든 조건을 만족하여 과제 점수 100점과 최대 가산점을 획득하였음"
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "title": "보안 메모 어플리케이션 Guardian",
+    "period": "2024.10 — 2025.12",
+    "badge": "",
+    "tags": ["AndroidStudio", "Java"],
+    "isOpen": false,
+    "images": [
+      {
+        "src": "assets/projects/project06/01.png",
+        "alt": "가디언"
+      },
+      {
+        "src": "assets/projects/project06/02.png",
+        "alt": "가디언"
+      },
+      {
+        "src": "assets/projects/project06/03.png",
+        "alt": "가디언"
+      },
+      {
+        "src": "assets/projects/project06/04.png",
+        "alt": "가디언"
+      },
+      {
+        "src": "assets/projects/project06/05.png",
+        "alt": "가디언"
+      },
+      {
+        "src": "assets/projects/project06/06.png",
+        "alt": "가디언"
+      }
+    ],
+    "links": [
+      {
+        "label": "PPT 자료",
+        "url": "../../assets/projects/project06/Guardian.pdf",
+        "type": "outline"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://GitHub.com/Changhee-Cho/Guardian-App",
+        "type": "outline"
+      }
+    ],
+    "goal": "1. 2024-2학기 모바일프로그래밍 수업 과목 기말 프로젝트를 제작한다.<br>2. 안드로이드 스튜디오를 활용하여 자율 주제로 기획/제작/구현한다.",
+    "details": [
+      {
+        "label": "담당",
+        "content": "프로젝트 전반 개발(기여도 100%), 코드리뷰 요청 및 반영 등"
+      },
+      {
+        "label": "해결",
+        "content": "PIN 비밀번호를 통해 어플의 내용에 접근할 수 있도록 하며, 어플 삭제 시 해당 내용도 삭제된다."
+      },
+      {
+        "label": "기술",
+        "content": "AndroidStudio, Java"
+      },
+      {
+        "label": "결과",
+        "content": "초기 실행 시 비밀번호 설정 화면 적용, 추후 비밀번호 수정 가능, 공유 기능 추가"
+      },
+      {
+        "label": "비고",
+        "content": "최종적으로 해당 수업에서 A+ 성적을 받음"
       }
     ]
   }
