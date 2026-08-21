@@ -305,18 +305,19 @@ ul {
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  padding: 32px;
+  padding: 28px;
   border-radius: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 .project-title {
-  font-size: 28px;
-  margin: 8px 0 12px;
+  font-size: 24px;
+  margin: 6px 0 10px;
 }
 .tag-group {
   display: flex;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 0;
+  flex-wrap: wrap;
 }
 .tag {
   background: var(--primary-light);
@@ -326,11 +327,23 @@ ul {
   border-radius: 4px;
   font-weight: 600;
 }
-.project-details {
+
+/* 프로젝트 2열 레이아웃 및 No-Media 지원 */
+.project-detail-layout {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 24px;
+  grid-template-columns: 48% 1fr;
+  gap: 28px;
+  align-items: start;
 }
+.project-detail-layout.no-media {
+  grid-template-columns: 1fr;
+}
+.project-media-col {
+  width: 100%;
+  position: sticky;
+  top: 90px;
+}
+
 .project-goal h4 {
   font-size: 13px;
   color: var(--text-secondary);
@@ -351,11 +364,13 @@ ul {
   border-bottom: 1px solid var(--border-color);
 }
 .project-table th {
-  width: 60px;
+  width: 75px;
   color: var(--text-secondary);
   font-weight: 500;
+  vertical-align: top;
 }
 
+/* 추가 프로젝트 */
 .sub-projects {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -370,13 +385,13 @@ ul {
 }
 .sub-project-list li {
   display: flex;
-  gap: 16px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border-color);
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-card);
   font-size: 14px;
-}
-.sub-project-list li:last-child {
-  border-bottom: none;
 }
 .sub-project-num {
   color: var(--primary);
@@ -532,19 +547,155 @@ ul {
   color: var(--primary);
 }
 
-/* --- Media Queries (반응형 규칙) --- */
+/* --- 아코디언 매끄러운 CSS Grid 애니메이션 --- */
+.project-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.project-summary-header::-webkit-details-marker,
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 6px 12px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.accordion-toggle-btn .toggle-icon {
+  font-size: 11px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* 열림/닫힘 상태별 버튼 텍스트 및 화살표 전환 */
+details:not([open]) .toggle-text::after {
+  content: "";
+}
+
+details[open] .accordion-toggle-btn .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* CSS Grid 0fr -> 1fr 슬라이딩 래퍼 */
+.accordion-content-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+details[open] .accordion-content-wrapper {
+  grid-template-rows: 1fr;
+}
+.accordion-inner {
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+details[open] .accordion-inner {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.05s;
+}
+
+/* --- 이미지 캐러셀 스타일 --- */
+.custom-carousel-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8fafc;
+  border: 1px solid #dfe3e8;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  background: rgba(18, 23, 34, 0.65);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  backdrop-filter: blur(4px);
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.carousel-btn:hover {
+  background: var(--primary);
+  transform: translateY(-50%) scale(1.05);
+}
+.carousel-btn.prev {
+  left: 12px;
+}
+.carousel-btn.next {
+  right: 12px;
+}
+
+/* --- 반응형 미디어 쿼리 --- */
 @media (max-width: 992px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-  .exp-grid {
-    grid-template-columns: 1fr;
-  }
+  .hero-grid,
+  .exp-grid,
   .skills-grid {
     grid-template-columns: 1fr;
   }
-  .project-details {
+}
+
+@media (max-width: 900px) {
+  .project-detail-layout {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .project-media-col {
+    position: static;
   }
 }
 
@@ -591,169 +742,13 @@ ul {
   .contact-cards {
     flex-direction: column;
   }
-  .sub-project-list li {
-    flex-direction: column;
-    gap: 4px;
-  }
 }
 
-/* Reduced Motion (접근성) */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-}
-
-/* 프로젝트 아코디언 스타일 */
-.project-summary-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-}
-.project-summary-header::-webkit-details-marker {
-  display: none;
-}
-
-.accordion-toggle-btn {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--primary);
-  background: var(--primary-light);
-  padding: 6px 12px;
-  border-radius: 6px;
-  flex-shrink: 0;
-  transition: background 0.2s;
-}
-
-.accordion-toggle-btn .toggle-icon {
-  font-size: 11px;
-  transition: transform 0.3s ease;
-}
-
-/* 열렸을 때 화살표 회전 */
-details[open] .toggle-icon {
-  transform: rotate(180deg);
-}
-
-/* 열렸을 때 버튼 텍스트 변경 지원 */
-details[open] .toggle-text::after {
-  content: " 접기";
-}
-details:not([open]) .toggle-text::after {
-  content: "";
-}
-
-/* 세부 내용 페이드 인 효과 */
-details[open] .project-details {
-  animation: slideDown 0.3s ease-out;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* --- 이미지 캐러셀 스타일 --- */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #eef2f6;
-  border: 1px solid var(--border-color);
-}
-
-.carousel-track {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* 파이어폭스 스크롤바 숨김 */
-  -ms-overflow-style: none; /* IE 스크롤바 숨김 */
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* 모바일 터치 슬라이드 가속 */
-}
-
-.carousel-track::-webkit-scrollbar {
-  display: none; /* 크롬/사파리 스크롤바 숨김 */
-}
-
-.carousel-item {
-  flex: 0 0 100%;
-  width: 100%;
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-/* 좌우 넘김 버튼 */
-/* 좌우 넘김 버튼 기본 스타일 */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  background: rgba(18, 23, 34, 0.6);
-  color: #ffffff;
-  border: none;
-  border-radius: 50%;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 2;
-  backdrop-filter: blur(4px);
-  transition:
-    background 0.2s,
-    transform 0.2s;
-}
-
-.carousel-btn:hover {
-  background: var(--primary, #2455d6);
-  transform: translateY(-50%) scale(1.05);
-}
-
-.carousel-btn.prev {
-  left: 8px;
-}
-
-.carousel-btn.next {
-  right: 8px;
-}
-
-/* 모바일 화면에서도 버튼이 보이도록 설정 */
-@media (max-width: 768px) {
-  .carousel-btn {
-    display: flex !important;
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
-    background: rgba(18, 23, 34, 0.5);
-  }
-  .carousel-btn.prev {
-    left: 6px;
-  }
-  .carousel-btn.next {
-    right: 6px;
+  .accordion-content-wrapper {
+    transition: none;
   }
 }
