@@ -1,29 +1,37 @@
-(async function logVisitor() {
-  //   로컬 개발 환경(localhost, 127.0.0.1) 접속 시 알림 발송 제외
+(async function logToDiscord() {
   if (
     location.hostname === "localhost" ||
     location.hostname === "127.0.0.1" ||
     location.protocol === "file:"
   ) {
-    console.log("로컬 개발 환경에서는 Discord 알림을 전송하지 않습니다.");
     return;
   }
 
-  // 브라우저 세션 중복 로깅 방지 (한 방문자가 새로고침/탭 이동 시 알림 도배 방지)
-  if (sessionStorage.getItem("visited_logged")) {
+  if (sessionStorage.getItem("discord_logged")) {
     return;
+  }
+
+  // 날짜/시간 정밀 포맷 함수 (YYYY. MM. DD. HH:mm:ss)
+  function getKoreanFormattedTime() {
+    return new Intl.DateTimeFormat("ko-KR", {
+      timeZone: "Asia/Seoul",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+    }).format(new Date());
   }
 
   try {
-    // 1. 방문자 IP 및 상세 Geolocation 정보 조회
     const res = await fetch("https://ipapi.co/json/");
     const data = await res.json();
 
-    // 2. 디스코드 웹훅 엔드포인트
     const DISCORD_WEBHOOK_URL =
       "https://discordapp.com/api/webhooks/1540716743234822165/RAmyZwShfQ8aXmZNaAOEIESdZZ_EtfBjSpWF5xO4WSY3G5q73W4YnmipynCMSOr7kIA4";
 
-    // 3. Discord Embed 형태로 전송
     await fetch(DISCORD_WEBHOOK_URL, {
       method: "POST",
       headers: {
@@ -34,14 +42,12 @@
         avatar_url: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
         embeds: [
           {
-            title: "👀 새로운 방문자가 포트폴리오에 접속했습니다!",
-            color: 3718648, // 포인트 컬러 (#38bdf8)
+            title: "👀 새로운 방문자가 접속했습니다!",
+            color: 3718648,
             fields: [
               {
                 name: "🕒 접속 일시",
-                value: new Date().toLocaleString("ko-KR", {
-                  timeZone: "Asia/Seoul",
-                }),
+                value: getKoreanFormattedTime(), // 수정된 함수 사용
                 inline: true,
               },
               {
@@ -79,11 +85,9 @@
         ],
       }),
     });
-
-    // 세션 스토리지 플래그 설정
-    /* 만약 새로고침 할 때는 알림을 안 받고 싶다면 이 부분 주석 해제 1줄 */
-    // sessionStorage.setItem("visited_logged", "true");
+    // 접속 1회 이후로는 알림을 받기 싫으면 추후 이 주석 해제
+    // sessionStorage.setItem("discord_logged", "true");
   } catch (error) {
-    console.error("방문자 트래킹 에러:", error);
+    console.error("Discord 알림 전송 실패:", error);
   }
 })();
