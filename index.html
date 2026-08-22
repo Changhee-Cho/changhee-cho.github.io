@@ -4,13 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>조창희 | Software Engineer Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+
+    <!-- 1. CDN 서버 사전 연결 (로딩 속도 극대화) -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+    <!-- 2. Pretendard CSS를 최우선으로 로드 -->
     <link
       rel="stylesheet"
-      as="style"
-      crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
+
+    <!-- 3. 파비콘 -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231e293b'/><path d='M28 32 L48 50 L28 68' stroke='%2338bdf8' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' fill='none'/><line x1='58' y1='68' x2='76' y2='68' stroke='%2338bdf8' stroke-width='10' stroke-linecap='round'/></svg>"
+    />
+
+    <!-- 4. Font Awesome 아이콘 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- 5. 사용자 정의 스타일시트 (폰트 설정보다 반드시 뒤에 위치) -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">본문 바로가기</a>
@@ -19,7 +36,33 @@
     <header class="site-header">
       <div class="container header-container">
         <a href="#" class="brand"
-          ><span class="brand-badge">C</span> CCH / PORTFOLIO</a
+          ><svg
+            class="brand-badge"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="100" height="100" rx="22" fill="#1e293b" />
+            <path
+              d="M28 32 L48 50 L28 68"
+              stroke="#38bdf8"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+            <line
+              x1="58"
+              y1="68"
+              x2="76"
+              y2="68"
+              stroke="#38bdf8"
+              stroke-width="10"
+              stroke-linecap="round"
+            /></svg
+          ><span class="brand-title"
+            >조창희 <span class="divider">/</span>
+            <span class="sub-text">PORTFOLIO</span></span
+          ></a
         >
         <button
           class="menu-toggle"
@@ -550,5 +593,8 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script src="etc/track.js"></script>
+    <script src="etc/GoogleTrack.js"></script>
   </body>
 </html>
