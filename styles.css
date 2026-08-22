@@ -100,20 +100,47 @@ ul {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-}
+} /* Brand Logo */
+/* Brand Logo */
 .brand {
-  font-weight: 700;
-  font-size: 18px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.65rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
 }
+
+.brand:hover {
+  transform: translateY(-1px);
+}
+
 .brand-badge {
-  background: var(--navy);
-  color: #fff;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.brand-title {
+  color: var(--text-main);
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+}
+
+.brand-title .divider {
+  color: var(--border);
+  margin: 0 0.35rem;
+  font-weight: 300;
+}
+
+.brand-title .sub-text {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
 }
 .site-nav ul {
   display: flex;
