@@ -15,7 +15,7 @@
 
   // ⚠️ Vercel 배포 후 발급받은 실제 API 주소로 수정해주세요.
   const VERCEL_DISCORD_API_URL =
-    "https://changhee-cho-github-g2qx8c3uo-changhees-projects-182a7034.vercel.app/api/log-visitor";
+    "https://changhee-cho-github-io.vercel.app/api/log-visitor";
 
   try {
     // 3. IP 및 위치 정보 수집
